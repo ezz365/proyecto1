@@ -1,7 +1,9 @@
+import logo from "../assets/logo.png"
+
 const CartWidget = () =>
 {
     return(
-            <img src="./assets/logo.png" />
+            <img src={logo} />
     ) 
 };
 
