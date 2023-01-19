@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Remera",
+        "id": 1,
+        "description": "Es una remera"
+    },
+    {
+        "name": "Pantalon",
+        "id": 2,
+        "description": "Es un pantalon"
+    },
+    {
+        "name": "Campera",
+        "id": 3,
+        "description": "Es una campera"
+    }
+]
