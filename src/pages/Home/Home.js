@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Item from "../../components/Item/Item";
 
 const Home = () => {
-    const [ itemList, setItemList] = useState([]);
+    const [itemsList, setItemsList] = useState([]);
 
     const getItems = fetch(
         "../../components/Item/item.json",
@@ -13,10 +13,9 @@ const Home = () => {
 
     useEffect(()=>{
         getItems
-        .then((resp) => resp.json())
-        .then((data)=>{
-            setItemList(data.results);
-            console.log(data.results);
+        .then(resp => resp.json())
+        .then(data =>{
+            setItemsList(data.results);
         })
         .catch((error) =>{
             console.log(error);
@@ -26,7 +25,7 @@ const Home = () => {
 
     return (
     <div>
-        { itemList.map((item) => (
+        { itemsList.map((item) => (
            <Item key={item.name} itemDetail={item} />
         ))}
         <Item />
